@@ -3,7 +3,7 @@
 const createRow = (flatten, size, nbRow) => {
     let arr = [];
     for (let i = 0; i < size; i++)
-	arr.push(flatten[i*3 + nbRow]);
+	arr.push(flatten[i*size + nbRow]);
     return arr;
 }
 
@@ -98,9 +98,17 @@ const square5 = [
     [1, 1, 1, 4],
 ]
 
+const square6 = [
+    [1, 1, 1, 1],
+    [1, 1, 1, 1],
+    [1, 1, 1, 1],
+    [1, 1, 1, 1]
+]
+
 
 console.log(isMagicSquare(square));
 console.log(isMagicSquare(square2));
 console.log(isMagicSquare(square3));
 console.log(isMagicSquare(square4));
 console.log(isMagicSquare(square5));
+console.log(isMagicSquare(square6));
