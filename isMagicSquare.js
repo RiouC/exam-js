@@ -105,6 +105,10 @@ const square6 = [
     [1, 1, 1, 1]
 ]
 
+const square7 = [
+    []
+]
+
 
 console.log(isMagicSquare(square));
 console.log(isMagicSquare(square2));
@@ -112,3 +116,4 @@ console.log(isMagicSquare(square3));
 console.log(isMagicSquare(square4));
 console.log(isMagicSquare(square5));
 console.log(isMagicSquare(square6));
+console.log(isMagicSquare(square7));
