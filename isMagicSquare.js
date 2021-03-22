@@ -26,8 +26,8 @@ const computeDiagonal = (matrix, reverse) => {
 	for (let i = 0; i < matrix.length; i++)
 	    res += matrix[i][i]
     } else if (reverse) {
-	for (let i = matrix.length - 1; i >= 0; i--)
-	    res += matrix[i][i]
+	for (let i = 0; i < matrix.length; i++)
+	    res += matrix[i][matrix.length - i - 1]
     } else
 	console.log("ERROR");
 
@@ -110,6 +110,31 @@ const square7 = [
 ]
 
 
+const square8 = [
+  [2, 7, 6, 1],
+  [9, 5, 1, 6],
+  [4, 3, 8, 3],
+  [1, 1, 1, 1],
+]
+
+// magic square
+const square9 = [
+  [17, 24, 1, 8, 15],
+  [23, 5, 7, 14, 16],
+  [4, 6, 13, 20, 22],
+  [10, 12, 19, 21, 3],
+  [11, 18, 25, 2, 9],
+]
+
+// not magic square
+const square10 = [
+  [11, 24, 1, 8, 15],
+  [23, 5, 7, 14, 1],
+  [4, 6, 6, 20, 22],
+  [10, 12, 19, 21, 7],
+  [11, 18, 25, 2, 9],
+]
+
 console.log(isMagicSquare(square));
 console.log(isMagicSquare(square2));
 console.log(isMagicSquare(square3));
@@ -117,3 +142,7 @@ console.log(isMagicSquare(square4));
 console.log(isMagicSquare(square5));
 console.log(isMagicSquare(square6));
 console.log(isMagicSquare(square7));
+
+console.log(isMagicSquare(square8));
+console.log(isMagicSquare(square9));
+console.log(isMagicSquare(square10));
